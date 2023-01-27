@@ -1,22 +1,65 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import axios from 'axios';
+import React, { useState } from 'react';
+import { NavLink, useNavigate } from 'react-router-dom';
 import Header from '../../Header/Header';
 
 const Login = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate();
+  const [errrorMessage, setErrorMessage] = useState('')
+
+  const handleSubmit = async (event:any) => {
+    event.preventDefault();
+    const formData = new FormData(event.currentTarget);
+    const form = {
+      email: formData.get('email'),
+      password: formData.get('password')
+    };
+    const { data } = await axios.post("http://localhost:5000/api/v1/user/signin", form);
+    if (data.status === parseInt('401')) {
+      setErrorMessage(data.response)
+    } else {
+      localStorage.setItem('token', data.token);
+      navigate('/dash')
+    }
+  };
+
+  const gotoSignUpPage = () => navigate("/register");
+  
   return (
     <>
         <Header />
-        <div className='content'>
-            <div className='text'>
-                <p>Login</p>
-            </div>
-            <form>
-                <label htmlFor="login">Login</label>
-                <input type="text" id="login" name="Login" placeholder="Enter login"/>
-                <label htmlFor="password">Password</label>
-                <input type="text" id="password" name="Login" placeholder="Enter password"/>
-                <input type="submit" value="Увійти" />
-            </form>
+        <div className='login__container'>
+          <h2> Login </h2>
+          <form className='login__form' onSubmit={handleSubmit}>
+            <label htmlFor = 'email'>Email</label>
+            <input
+              type = "text"
+              id = 'email'
+              name = 'email'
+              value = {email}
+              required
+              onChange={(e:any) => setEmail(e.target.value)}
+            />
+            <label htmlFor='password'>Password</label>
+            <input
+              type = 'password'
+              name = 'password'
+              id = 'password'
+              minLength={8}
+              required
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            <button className='loginBtn'>SIGN UP</button>
+            <p>
+              Don't haave an account?{" "}
+              <span className='link' onClick={gotoSignUpPage}>
+                Sign up
+              </span>
+            </p>
+          </form>
         </div>
     </>
   );
