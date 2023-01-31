@@ -11,16 +11,41 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-left: 400px;
+    /*margin-left: 400px - сменили*/
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.information p{
+/*.information p{
     font-size: 2rem;
-}
+} - убрали*/
 
 .image{
     display: flex;
     align-items: center;
     justify-content: center;
     margin-right: 400px;
+}
+
+
+/*новое*/
+.imgsFirstPage{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 300px;
+    margin-bottom: 100px;
+}
+
+.imgFirstPage{
+    width: 500px;
+    height: 500px;
+}
+
+.textFirstPage{
+    font-size: 26px;
+}
+
+.textFirstPage:last-child{
+    border-bottom: thin solid black;
+    padding-bottom: 15px;
 }
