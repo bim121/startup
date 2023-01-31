@@ -74,3 +74,18 @@
     width: 33%;
     height: 300px;
 }
+
+.blocksThirdPage{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.blockThirdPage{
+    text-align: center;
+}
+
+.imgsThirdPage{
+    width: 100%;
+    height: 400px;
+}

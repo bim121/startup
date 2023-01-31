@@ -25,6 +25,13 @@ const ContentStartPage = () => {
                 <img src = "boi22.jpg" className={style.imgSecondPage}></img>
                 <img src = "karta2.png" className={style.imgSecondPage}></img>
                 </div>
+                {/* 3 */}
+                <h2>Team</h2>
+                <div className = {style.blocksThirdPage}>
+                <div className = {style.blockThirdPage}><img src = "Stepan.jpg" className = {style.imgsThirdPage}></img><p>Stepan Pan</p></div>
+                <div className = {style.blockThirdPage}><img src = "Vitalik.jpg" className = {style.imgsThirdPage}></img><p>Vitalii Tischik</p></div>
+                <div className = {style.blockThirdPage}><img src = "Danil.jpg" className = {style.imgsThirdPage}></img><p>Danil Tkachenko</p></div>
+                </div>
             </div>
             {/*<div className={style.image}></div> - удалили*/}
         </div>
