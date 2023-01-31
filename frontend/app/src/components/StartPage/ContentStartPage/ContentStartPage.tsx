@@ -7,7 +7,7 @@ const ContentStartPage = () => {
     <>
         <div className={style.content}>
             <div className={style.information}>
-                <p>asdjfkajdkf asdfasdfkj asdfjladkfj adfsfd asdjfkajdkf asdfasdfkj asdfjladkfj adfsfd</p>
+                <p>Ass</p>
             </div>
             <div className={style.image}>
                 <img src="books.png" alt="logo"/>
@@ -17,4 +17,4 @@ const ContentStartPage = () => {
   );
 }
 
-export default ContentStartPage ;
+export default ContentStartPage;
