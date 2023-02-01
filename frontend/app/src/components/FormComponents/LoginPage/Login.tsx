@@ -54,7 +54,7 @@ const Login = () => {
             />
             <button className='loginBtn'>SIGN UP</button>
             <p>
-              Don't haave an account?{" "}
+              Don't have an account?{" "}
               <span className='link' onClick={gotoSignUpPage}>
                 Sign up
               </span>

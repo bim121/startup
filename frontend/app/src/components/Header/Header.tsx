@@ -7,7 +7,7 @@ const Header = () => {
     <>
         <div className={style.header}>
             <div className={style.image__logo}>
-                <NavLink to = '/'><img src="logo.png" alt="logo"/></NavLink>
+                <NavLink to = '/'><img src="newlogo.png" alt="logo" className={style.logotype}/></NavLink>
             </div>
             <div className={style.links}>
                 <NavLink to ='/login'>Вхід</NavLink>
