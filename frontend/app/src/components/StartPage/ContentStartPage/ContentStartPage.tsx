@@ -32,6 +32,26 @@ const ContentStartPage = () => {
                 <div className = {style.blockThirdPage}><img src = "Vitalik.jpg" className = {style.imgsThirdPage}></img><p>Vitalii Tischik</p></div>
                 <div className = {style.blockThirdPage}><img src = "Danil.jpg" className = {style.imgsThirdPage}></img><p>Danil Tkachenko</p></div>
                 </div>
+                <footer>
+                  <div className={style.footerContent}>
+                  <a href = "#!"><img src = "newlogo.png" className={style.logotype}></img></a>
+                  <div className = {style.footerText}>
+                    <div className = {style.footerColumn}>
+                      <a href = "#!">Our telegram chat</a>
+                      <a href = "#!">Support</a>
+                      <a href = "#!">About us</a>
+                    </div>
+                    <div className = {style.footerColumn}>
+                      <a href = "#!">Contacts</a>
+                      <a href = "#!">Status</a>
+                      <a href = "#!">Instructions</a>
+                    </div>
+                  </div>
+                  </div>
+                  <div className = {style.copyInfo}>
+                    <p className={style.copyInfoText}>©2023 Pocket Buddy. All rights protected</p>
+                  </div>
+                </footer>
             </div>
             {/*<div className={style.image}></div> - удалили*/}
         </div>
