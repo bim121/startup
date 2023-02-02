@@ -1,5 +1,5 @@
 body{
-    background-color: #d0edf5;
+    background-color: white;
 }
 
 p{
@@ -15,9 +15,18 @@ p{
     url("../../../fonts/3bff66e162b5055b568f8b36891ee8ca.svg#Rany") format("svg"); /* iOS 4.1- */
   }
 
+  span{
+    color: #685ED6;
+}
+
+.image{
+    width: 23vw;
+    height: 400px;
+}
+
 .content{
     font-family: 'Rany';
-    width: 70%;
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -30,58 +39,16 @@ p{
     align-items: center;
 }
 
-.blockSecondPage{
-    width: 100%;
+.images{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    height: 120px;
     margin-top: 150px;
-    margin-bottom: 150px;
 }
 
-.blockSecondPage img:last-child{
-    margin-left: 65px;
-}
-
-.mapImages{
-    display: flex;
-    flex-direction: row;
-    width: 50%;
-}
-
-.secondBlockSecondPage{
-    display: flex;
-    width: 30%;
-    font-size: 1.7rem;
-    flex-direction: column;
-}
-
-.secondBlockSecondPage p{
-    margin-bottom: 50px;
-}
-
-.imageBoy{
-    width: 12vw;
-    height: 350px;
-}
-
-.imageMap{
-    width: 18vw;
-    height: 350px;
-}
-
-.blocksThirdPage{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-
-.blockThirdPage{
-    text-align: center;
-}
-
-.imgsThirdPage{
-    width: 100%;
-    height: 400px;
+.image{
+    width: 100px;
+    height: 100px;
 }
 
 

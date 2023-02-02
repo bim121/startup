@@ -1,0 +1,39 @@
+.wrapper{
+    display: flex;
+    justify-content: center;
+    background-color: #BB96DC;
+    width: 100%;
+}
+
+.opportunitiesPart{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 75px;
+    margin-bottom: 75px;
+}
+
+.images{
+    display: flex;
+    flex-direction: row;
+}
+
+.textBlock{
+    display: flex;
+    width: 30%;
+    font-size: 1.7rem;
+    flex-direction: column;
+}
+
+.textBlock p{
+    color: white;
+    margin-bottom: 50px;
+}
+
+.textBlock span{
+    color: #5446d3;
+}
+
+.textLarge{
+    font-size: 2.1rem;
+}
