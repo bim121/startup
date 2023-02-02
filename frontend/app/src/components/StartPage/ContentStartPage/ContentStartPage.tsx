@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import StartInformation from '../StartInformation/StartInformation';
 import style from "./ContentStartPage.module.css";
 
 const ContentStartPage = () => {
@@ -7,53 +8,31 @@ const ContentStartPage = () => {
     <>
         <div className={style.content}>
             <div className={style.information}>
-                <div className={style.imgsFirstPage}>
-                <img src = "karta.jpg" className= {style.imgFirstPage}></img>
-                <img src = "boi1.jpg" className= {style.imgFirstPage}></img>
-                <img src = "karta.jpg" className= {style.imgFirstPage}></img>
-                </div>
-                <p className={style.textFirstPage}>Salam, user. This website allows you to find any map of any building you are in.</p>
-                <p className={style.textFirstPage}>Also, in future we are planning to add some new features and possibilities here.</p>
+                <StartInformation />
                 {/* Второе */}
+
                 <div className = {style.blockSecondPage}>
-                <div className = {style.secondBlockSecondPage}>
-                <p className = {style.textSecondPage}>This project gives you such opportunities as: </p>
-                <p className = {style.textSecondPage}>- ability to check the map of the building</p>
-                <p className = {style.textSecondPage}>- ability to show the way to the point in the building</p>
-                <p className = {style.textSecondPage}>- ability to find the rooms by name or number</p>
+                  <div className = {style.secondBlockSecondPage}>
+                    <p>This project gives you such opportunities as: </p>
+                    <p>- ability to check the map of the building</p>
+                    <p>- ability to show the way to the point in the building</p>
+                    <p>- ability to find the rooms by name or number</p>
+                  </div>
+                  <div className={style.mapImages}>
+                    <img src = "boi22.jpg" className={style.imageBoy} alt = "#"></img>
+                    <img src = "karta2.png" className={style.imageMap} alt = "#"></img>
+                  </div>
                 </div>
-                <img src = "boi22.jpg" className={style.imgSecondPage}></img>
-                <img src = "karta2.png" className={style.imgSecondPage}></img>
-                </div>
+
                 {/* 3 */}
+
                 <h2>Team</h2>
                 <div className = {style.blocksThirdPage}>
-                <div className = {style.blockThirdPage}><img src = "Stepan.jpg" className = {style.imgsThirdPage}></img><p>Stepan Pan</p></div>
-                <div className = {style.blockThirdPage}><img src = "Vitalik.jpg" className = {style.imgsThirdPage}></img><p>Vitalii Tischik</p></div>
-                <div className = {style.blockThirdPage}><img src = "Danil.jpg" className = {style.imgsThirdPage}></img><p>Danil Tkachenko</p></div>
+                <div className = {style.blockThirdPage}><img src = "Stepan.jpg" className = {style.imgsThirdPage} alt = "#"></img><p>Stepan Pan</p></div>
+                <div className = {style.blockThirdPage}><img src = "Vitalik.jpg" className = {style.imgsThirdPage} alt = "#"></img><p>Vitalii Tischik</p></div>
+                <div className = {style.blockThirdPage}><img src = "Danil.jpg" className = {style.imgsThirdPage} alt = "#"></img><p>Danil Tkachenko</p></div>
                 </div>
-                <footer>
-                  <div className={style.footerContent}>
-                  <a href = "#!"><img src = "newlogo.png" className={style.logotype}></img></a>
-                  <div className = {style.footerText}>
-                    <div className = {style.footerColumn}>
-                      <a href = "#!">Our telegram chat</a>
-                      <a href = "#!">Support</a>
-                      <a href = "#!">About us</a>
-                    </div>
-                    <div className = {style.footerColumn}>
-                      <a href = "#!">Contacts</a>
-                      <a href = "#!">Status</a>
-                      <a href = "#!">Instructions</a>
-                    </div>
-                  </div>
-                  </div>
-                  <div className = {style.copyInfo}>
-                    <p className={style.copyInfoText}>©2023 Pocket Buddy. All rights protected</p>
-                  </div>
-                </footer>
             </div>
-            {/*<div className={style.image}></div> - удалили*/}
         </div>
     </>
   );

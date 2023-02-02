@@ -1,53 +1,33 @@
+body{
+    background-color: #d0edf5;
+}
+
+p{
+    margin: 0;
+}
+
+@font-face {font-family: "Rany";
+    src: url("../../../fonts/3bff66e162b5055b568f8b36891ee8ca.eot"); /* IE9*/
+    src: url("../../../fonts/3bff66e162b5055b568f8b36891ee8ca.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("../../../fonts/3bff66e162b5055b568f8b36891ee8ca.woff2") format("woff2"), /* chrome、firefox */
+    url("../../../fonts/3bff66e162b5055b568f8b36891ee8ca.woff") format("woff"), /* chrome、firefox */
+    url("../../../fonts/3bff66e162b5055b568f8b36891ee8ca.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url("../../../fonts/3bff66e162b5055b568f8b36891ee8ca.svg#Rany") format("svg"); /* iOS 4.1- */
+  }
+
 .content{
-    /*height: 600px; - убрали*/
-    width: 100%;
+    font-family: 'Rany';
+    width: 70%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
 }
 
 .information{
     display: flex;
+    width: 100%;
     flex-direction: column;
     align-items: center;
-    /*margin-left: 400px - сменили*/
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/*.information p{
-    font-size: 2rem;
-} - убрали*/
-
-.image{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 400px;
-}
-
-
-/*новое*/
-.imgsFirstPage{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 100px;
-    margin-bottom: 100px;
-}
-
-.imgFirstPage{
-    width: 100%;
-    height: 500px;
-}
-
-.textFirstPage{
-    font-size: 2rem;
-}
-
-.textFirstPage:last-child{
-    border-bottom: thin solid black;
-    padding-bottom: 15px;
 }
 
 .blockSecondPage{
@@ -55,24 +35,38 @@
     display: flex;
     justify-content: space-between;
     margin-top: 150px;
+    margin-bottom: 150px;
 }
 
 .blockSecondPage img:last-child{
     margin-left: 65px;
 }
 
-.secondBlockSecondPage{
-    margin-right: 400px;
+.mapImages{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
 }
 
-.textSecondPage{
-    font-size: 20px;
+.secondBlockSecondPage{
+    display: flex;
+    width: 30%;
+    font-size: 1.7rem;
+    flex-direction: column;
+}
+
+.secondBlockSecondPage p{
     margin-bottom: 50px;
 }
 
-.imgSecondPage{
-    width: 33%;
-    height: 300px;
+.imageBoy{
+    width: 12vw;
+    height: 350px;
+}
+
+.imageMap{
+    width: 18vw;
+    height: 350px;
 }
 
 .blocksThirdPage{
@@ -90,47 +84,10 @@
     height: 400px;
 }
 
-footer{
-    background-color: #1D2530;
-    width: 100%;
-    height: 350px;
-}
 
-.footerContent{
-    display: flex;
-    justify-content: space-between;
-}
-
-.logotype{
-    width: 200px;
-    height: 100px;
-    margin-left: 100px;
-    margin-top: 100px;
-}
-
-.copyInfo{
-    height: 70px;
-    width: 100%;
-    background-color: #141B23;
-    margin-top: 80px;/*хрень?*/
-    color: white;
-    padding-top: 25px;
-}
-
-.copyInfoText{
-    color: white;
-    margin-left: 100px;
-}
-
-.footerColumn{
-    display: flex;
-    flex-direction: column;
-}
-
-.footerText{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 120px;
-    margin-right: 200px;
-    font-size: 18px;
+@media screen and (max-width: 1100px) {
+    .imagesFirstPage img{
+        width: 19vw;
+        height: 250px;
+    }
 }

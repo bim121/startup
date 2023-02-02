@@ -16,7 +16,7 @@ const Login = () => {
       email: formData.get('email'),
       password: formData.get('password')
     };
-    const { data } = await axios.post("http://localhost:5000/api/v1/user/signin", form);
+    const { data } = await axios.post("http://localhost:5000/user/signin", form);
     if (data.status === parseInt('401')) {
       setErrorMessage(data.response)
     } else {

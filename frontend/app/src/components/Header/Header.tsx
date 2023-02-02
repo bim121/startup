@@ -6,12 +6,14 @@ const Header = () => {
   return (
     <>
         <div className={style.header}>
-            <div className={style.image__logo}>
-                <NavLink to = '/'><img src="newlogo.png" alt="logo" className={style.logotype}/></NavLink>
-            </div>
-            <div className={style.links}>
-                <NavLink to ='/login'>Вхід</NavLink>
-                <NavLink to ='/register'>Реєстрація</NavLink>
+            <div className={style.wrapper}>
+              <div className={style.image__logo}>
+                  <NavLink to = '/'><img src="newlogo.png" alt="logo" className={style.logotype}/></NavLink>
+              </div>
+              <div className={style.links}>
+                  <NavLink to ='/login'>Вхід</NavLink>
+                  <NavLink to ='/register'>Реєстрація</NavLink>
+              </div>
             </div>
         </div>
     </>

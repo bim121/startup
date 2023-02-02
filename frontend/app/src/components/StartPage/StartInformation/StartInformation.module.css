@@ -1,0 +1,27 @@
+.startInformation{
+    display: flex;
+    width: 100%;
+    margin-top: 150px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.image{
+    width: 23vw;
+    height: 400px;
+}
+
+
+.textBlock{
+    margin-top: 70px;
+    font-size: 3.5rem;
+    width: 45%;
+}
+.text{
+    font-size: 1.8rem;
+    margin-top: 40px;
+}
+
+span{
+    color: #685ED6;
+}

@@ -18,7 +18,7 @@ const Register = () => {
             password: data.get('password')
         };
         console.log(form);
-        await axios.post("http://localhost:5000/api/v1/user/signup", form); 
+        await axios.post("http://localhost:5000/user/signup", form); 
         navigate('/login')
     };
     const gotoLoginPage = () => navigate("/login");
