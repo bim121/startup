@@ -6,6 +6,7 @@ const ContentStartPage = () => {
   return (
     <>
         <footer>
+            <div className={style.footer}>
             <div className={style.footerContent}>
                 <a href = "#!"><img src = "newlogo.png" className={style.logotype} alt = "#"></img></a>
                 <div className = {style.footerText}>
@@ -24,9 +25,14 @@ const ContentStartPage = () => {
             <div className = {style.copyInfo}>
                 <p className={style.copyInfoText}>©2023 Pocket Buddy. All rights protected</p>
             </div>
+            </div>
         </footer>
     </>
   );
 }
 
 export default ContentStartPage;                
+
+<div className = {style.copyInfo}>
+                <p className={style.copyInfoText}>©2023 Pocket Buddy. All rights protected</p>
+            </div>

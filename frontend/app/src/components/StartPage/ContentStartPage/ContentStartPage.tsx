@@ -8,12 +8,10 @@ const ContentStartPage = () => {
   return (
     <>
         <div className={style.content}>
-            <div className={style.information}>
-                <StartInformation />
-                <OpportunitiesPart />
-                <PageWhyWeAreHere />
-                <Team />
-            </div>
+          <StartInformation />
+          <OpportunitiesPart />
+          <PageWhyWeAreHere />
+          <Team />
         </div>
     </>
   );
