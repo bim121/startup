@@ -4,7 +4,7 @@ import { NavLink, useNavigate } from 'react-router-dom';
 import Header from '../../Header/Header';
 
 const Login = () => {
-  const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
   const [errrorMessage, setErrorMessage] = useState('')
@@ -13,7 +13,7 @@ const Login = () => {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
     const form = {
-      email: formData.get('email'),
+      username: formData.get('username'),
       password: formData.get('password')
     };
     const { data } = await axios.post("http://localhost:5000/auth/login", form);
@@ -33,14 +33,14 @@ const Login = () => {
         <div className='login__container'>
           <h2> Login </h2>
           <form className='login__form' onSubmit={handleSubmit}>
-            <label htmlFor = 'email'>Email</label>
+            <label htmlFor = 'username'>username</label>
             <input
               type = "text"
-              id = 'email'
-              name = 'email'
-              value = {email}
+              id = 'username'
+              name = 'username'
+              value = {username}
               required
-              onChange={(e:any) => setEmail(e.target.value)}
+              onChange={(e:any) => setUsername(e.target.value)}
             />
             <label htmlFor='password'>Password</label>
             <input

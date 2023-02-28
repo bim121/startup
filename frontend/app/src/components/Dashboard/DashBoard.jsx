@@ -59,7 +59,7 @@ const DashBoard = () => {
   const [imageData, setImageData] = useState(null);
 
   const handleButtonClick = () => {
-    setImageData("http://localhost:5000/image/d653a601-f2ad-4fca-9705-dc0166976c4a.png");
+    setImageData("http://localhost:5000/image/6a4037ee-58b9-40c4-8de5-edb7d84e076c.png");
     if (imageData) {
           renderPicture();
     }
