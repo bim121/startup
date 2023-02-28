@@ -1,7 +1,7 @@
+import Slider from '../../widgets/Slider/Slider';
 import OpportunitiesPart from '../OpportunitiesPart/OpportunitiesPart';
 import PageWhyWeAreHere from '../PageWyWeAreHere/PageWhyWeAreHere';
 import StartInformation from '../StartInformation/StartInformation';
-import Team from '../Team/Team';
 import style from "./ContentStartPage.module.css";
 
 const ContentStartPage = () => {
@@ -11,7 +11,7 @@ const ContentStartPage = () => {
           <StartInformation />
           <OpportunitiesPart />
           <PageWhyWeAreHere />
-          <Team />
+          <Slider/>
         </div>
     </>
   );
