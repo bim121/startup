@@ -13,12 +13,12 @@ const Register = () => {
         event.preventDefault();
         const data = new FormData(event.currentTarget);
         const form = {
-            username : "sdf",
+            username : data.get('username'),
             email: data.get('email'),
             password: data.get('password')
         };
         console.log(form);
-        await axios.post("http://localhost:5002/user/signup", form); 
+        await axios.post("http://localhost:5000/auth/register", form); 
         navigate('/login')
     };
     const gotoLoginPage = () => navigate("/login");
