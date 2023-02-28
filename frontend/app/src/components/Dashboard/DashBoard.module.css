@@ -21,7 +21,7 @@
 }
 
 .image{
-    width: 23vw;
+    width: 27vw;
     height: 400px;
 }
 
@@ -39,4 +39,10 @@
 
 span{
     color: #685ED6;
+}
+
+button{
+    background-color: #5a52ad;
+    border-radius: 15px;
+    color: white;
 }

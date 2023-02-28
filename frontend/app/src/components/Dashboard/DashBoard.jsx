@@ -5,10 +5,16 @@ import styled from "styled-components";
 import Footer from '../Footer/Footer';
 import { useState } from 'react';
 
-const options = [
-  { value: "chocolate", label: "Chocolate" },
-  { value: "strawberry", label: "Strawberry" },
-  { value: "vanilla", label: "Vanilla" }
+const optionsMaps = [
+  { value: "Main", label: "Main" }
+];
+
+const optionsBuildings = [
+  { value: "CHNU", label: "CHNU" }
+];
+
+const optionsCities = [
+  { value: "Mykolaiv", label: "Mykolaiv" }
 ];
 
 const StyledSelect = styled(Select)`
@@ -47,19 +53,42 @@ const StyledSelect = styled(Select)`
 `;
 
 const DashBoard = () => {
-  const [selectedOption, setSelectedOption] = useState("none");
+  const [selectedOptionFirst, setSelectedOptionFirst] = useState("none");
+  const [selectedOptionSecond, setSelectedOptionSecond] = useState("none");
+  const [selectedOptionThird, setSelectedOptionThird] = useState("none");
+  const [imageData, setImageData] = useState(null);
 
-  const handleTypeSelect = (e) => {
-    setSelectedOption(e.value);
+  const handleButtonClick = () => {
+    setImageData("http://localhost:5000/image/d653a601-f2ad-4fca-9705-dc0166976c4a.png");
+    if (imageData) {
+          renderPicture();
+    }
   };
 
-  const MyComponent = () => (
+  const renderPicture = () => {
+    return <img src={imageData} className = {style.image}/>;
+  };
+
+  const handleTypeSelectFirst = (e) => {
+    setSelectedOptionFirst(e.value);
+  };
+
+  const handleTypeSelectSecond = (e) => {
+    setSelectedOptionSecond(e.value);
+  };
+
+  const handleTypeSelectThird= (e) => {
+    setSelectedOptionThird(e.value);
+  };
+
+
+  const MyComponent = (props) => (
     <StyledSelect
       classNamePrefix="Select"
-      onChange={handleTypeSelect}
-      options={options}
-      value={options.filter(function(option) {
-        return option.value === selectedOption;
+      onChange={props.handleTypeSelect}
+      options={props.options}
+      value={props.options.filter(function(option) {
+        return option.value === props.selectedOption;
       })}
     />
   );
@@ -70,14 +99,17 @@ const DashBoard = () => {
         <div className={style.content}>
           <div className={style.wrapper}>
             <div className={style.sectionSelect}>
-              <MyComponent />
-              <MyComponent />
-              <MyComponent />
+              <MyComponent handleTypeSelect = { handleTypeSelectFirst} selectedOption = {selectedOptionFirst} options = {optionsCities}/>
+              <MyComponent handleTypeSelect = { handleTypeSelectSecond} selectedOption = {selectedOptionSecond} options = {optionsBuildings}/>
+              <MyComponent handleTypeSelect = { handleTypeSelectThird} selectedOption = {selectedOptionThird} options = {optionsMaps}/>
             </div>
             <div className={style.startImage}>
-                <img src="startImage.png" className = {style.image} alt ="#"></img>
+              {imageData ? renderPicture() : ""}
             </div>
-        </div>
+          </div>
+          <div>
+            <button onClick={handleButtonClick}>Search</button>
+          </div>
       </div>
       <Footer/>
     </>
