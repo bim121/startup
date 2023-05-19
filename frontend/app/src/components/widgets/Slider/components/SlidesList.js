@@ -4,7 +4,6 @@ import { SliderContext } from "../Slider";
 
 export default function SlidesList() {
   const { slideNumber, items } = useContext(SliderContext);
-  console.log(items[0])
   return (
     <div
       className="slide-list"

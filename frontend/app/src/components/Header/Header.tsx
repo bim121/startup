@@ -13,6 +13,7 @@ const Header = () => {
               <div className={style.links}>
                   <NavLink to ='/login'>Вхід</NavLink>
                   <NavLink to ='/register'>Реєстрація</NavLink>
+                  <NavLink to ='/adminDashboard'>admin dashboard</NavLink>
               </div>
             </div>
         </div>

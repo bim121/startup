@@ -10,7 +10,7 @@ const optionsMaps = [
 ];
 
 const optionsBuildings = [
-  { value: "CHNU", label: "CHNU" }
+  { value: "Petro Mohyla National University", label: "Petro Mohyla National University" }
 ];
 
 const optionsCities = [
@@ -59,7 +59,7 @@ const DashBoard = () => {
   const [imageData, setImageData] = useState(null);
 
   const handleButtonClick = () => {
-    setImageData("http://localhost:5000/image/6a4037ee-58b9-40c4-8de5-edb7d84e076c.png");
+    setImageData("http://localhost:5000/image/1e3821a3-e00a-47cf-b575-992cc1bcf6bb.png");
     if (imageData) {
           renderPicture();
     }
